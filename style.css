@@ -1,0 +1,184 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("images/kale-bg.jpg") no-repeat center center fixed;
+  background-size:cover;
+  color:#222;
+}
+
+/* ANA SAYFA */
+.home-wrapper{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.home-title{
+  font-size:56px;
+  letter-spacing:10px;
+  color:#fff;
+  margin-bottom:10px;
+}
+
+.home-subtitle{
+  color:#eee;
+  margin-bottom:60px;
+  font-size:18px;
+}
+
+.home-categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:35px;
+  width:90%;
+  max-width:1000px;
+}
+
+.category-box{
+  position:relative;
+  height:230px;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 25px 45px rgba(0,0,0,0.5);
+  transition:0.4s;
+}
+
+.category-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.category-box span{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.45);
+  color:#fff;
+  font-size:26px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+.category-box:hover{
+  transform:scale(1.12);
+}
+
+.category-box:hover img{
+  filter:brightness(0.7);
+}
+
+/* İÇ SAYFALAR */
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:80px auto;
+  background:rgba(255,255,255,0.95);
+  padding:50px;
+  border-radius:18px;
+  box-shadow:0 25px 45px rgba(0,0,0,0.35);
+}
+
+h2{
+  font-size:30px;
+  margin-bottom:25px;
+  border-left:6px solid #333;
+  padding-left:15px;
+}
+
+p{
+  line-height:1.9;
+  font-size:17px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.card{
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  transition:0.4s;
+}
+
+.card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:20px;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 35px rgba(0,0,0,0.3);
+}
+
+footer{
+  text-align:center;
+  margin-top:60px;
+  color:#444;
+  font-size:15px;
+}
+
+/* SAĞ SABİT KATEGORİ MENÜSÜ */
+.side-menu{
+  position:fixed;
+  top:50%;
+  right:25px;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  z-index:1000;
+}
+
+.side-menu a{
+  background:rgba(255,255,255,0.9);
+  color:#333;
+  padding:12px 16px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  box-shadow:0 10px 20px rgba(0,0,0,0.3);
+  transition:0.3s;
+  white-space:nowrap;
+}
+
+.side-menu a:hover{
+  transform:scale(1.15);
+  background:#fff;
+}
+
+@media(max-width:768px){
+  .side-menu{
+    right:10px;
+  }
+
+  .side-menu a{
+    padding:10px 14px;
+    font-size:13px;
+  }
+}
+
+
