@@ -181,4 +181,21 @@ footer{
   }
 }
 
+@media (max-width: 768px) {
+  .categories {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .category-card {
+    width: 90%;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+
 
